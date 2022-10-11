@@ -13,4 +13,7 @@ Projects contents:
 
 ![image](https://user-images.githubusercontent.com/65610099/195156991-fd319463-af51-4880-968a-b4206f379ee1.png)
 
+4. Music website template : Music Website Template using HTML, CSS & JavaScript
+
+
 

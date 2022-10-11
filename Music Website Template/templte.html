@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+
+		/* Styling the body */
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		/* Styling the background image by
+		giving its url and position */
+		.container {
+			height: 100vh;
+			width: 100%;
+			background-image: url(
+'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fvectors%2Fmusic&psig=AOvVaw0NFas4O8xGRjGkaYvQQ_LL&ust=1665595454380000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLio6drY2PoCFQAAAAAdAAAAABAE');
+			
+			/* Image used: */
+			background-size: cover;
+			background-position: center;
+			position: relative;
+		}
+
+		/* Styling the list tags to the
+		right of the navigation bar */
+		.nav li {
+			float: right;
+			list-style: none;
+		}
+
+		/* Styling the anchor tags of
+		the navigation bar */
+		.nav a {
+			list-style: none;
+			height: 50px;
+			line-height: 50px;
+			font-size: 1rem;
+			font-weight: 550;
+			display: block;
+			padding: 5px 35px;
+			color: black;
+			text-decoration: none;
+		}
+
+		/* Giving position and margin
+		to the content-div */
+		.content {
+			width: 100%;
+			position: absolute;
+			top: 45%;
+		}
+
+		/* Styling the left-col by
+		giving margin */
+		.left-col {
+			margin-left: 11%;
+		}
+
+		/* Styling the my sound placed
+		in the left-col */
+		.left-col h1 {
+			font-size: 50px;
+			color: crimson;
+		}
+
+		/* Styling the right-col */
+		.right-col {
+			float: right;
+			margin-right: 10%;
+			margin-top: -5%;
+			display: flex;
+			align-items: center;
+		}
+
+		/* Styling the text in the right-col */
+		.right-col p {
+			font-size: 21px;
+			color: black;
+			font-weight: 650;
+			margin-right: 20px;
+		}
+
+		/* Styling the cursor type
+		of the icon to pointer */
+		#icon {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<ul class="nav">
+			<li><a href="#">CONTACT</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">ARTISTS</a></li>
+			<li><a href="#">MUSIC</a></li>
+			<li><a href="#">HOME</a></li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<div class="left-col">
+			<h1>MY <br> SOUNDS</h1>
+		</div>
+
+		<div class="right-col">
+			
+
+<p>Click Here To Listen</p>
+
+
+			<img src="media/play.png" id="icon">
+		</div>
+	</div>
+
+	<audio id="mysound">
+		<source src="media/music.mp3" type="audio/mp3">
+	</audio>
+
+	<script>
+		var mysound = document.getElementById("mysound");
+		var icon = document.getElementById("icon");
+
+		// Creating a function that will change
+		// pause to play and vice-versa
+		icon.onclick = function() {
+			if (mysound.paused) {
+
+				// If paused then play the
+				// music and change the image
+				mysound.play();
+				icon.src =
+"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Fpause-icon&psig=AOvVaw2M1KChznqUTSFgOJx0EpRB&ust=1665595508076000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLDxyfTY2PoCFQAAAAAdAAAAABAE";
+			} else {
+
+				// If playing then pause the
+				// music and change the image
+				mysound.pause();
+				icon.src =
+"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fplay-button_375&psig=AOvVaw2XV_tKEDMgQLUJctWCcr0p&ust=1665595558591000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNiI5YzZ2PoCFQAAAAAdAAAAABAE";
+			}
+		}
+	</script>
+</body>
+
+</html>
